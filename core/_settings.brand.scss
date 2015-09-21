@@ -1,0 +1,37 @@
+$brand-primary: #17a9a8;
+$brand-primary-active: #0b9694;
+$brand-secondary: #be4474;
+$brand-tertiary: #fff;
+$brand-delta: #627793;
+$brand-border-light: #efeef0;
+$brand-bg-light: #fafafa;
+
+// TEXT
+$text-primary: $brand-delta;
+$text-secondary: #17a9a8;
+
+// HEADINGS
+$heading: $brand-delta;
+$heading-info: $brand-delta;
+
+// BUTTONS
+$btn-default-bg: $brand-primary;
+$btn-default-bg-hover: $brand-primary;
+$btn-default-color: #ffffff;
+$btn-border: $brand-primary;
+$btn-default-bg-pasive: #c6c6c6 !default;
+$btn-default-bg-pasive-hover: #8f8f8f !default;
+
+$btn-pill-bg: $brand-tertiary;
+
+// TABLES
+$border-color: $brand-border-light;
+$table-strip-bg: $brand-primary;
+$thead-bg: $brand-primary;
+
+// MAIN
+$navbar-bg: $brand-bg-light;
+$navbar-border: $brand-border-light;
+
+// SOCIAL
+$google: #DD4B39;

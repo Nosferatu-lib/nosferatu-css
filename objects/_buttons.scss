@@ -1,0 +1,124 @@
+$btn-small-size: 2.5em;
+
+.btn,
+%btn {
+	box-sizing: border-box;
+	line-height: 1.5;
+	position: relative;
+	background-color: $btn-default-bg-pasive;
+	border: 0;
+
+	&:hover {
+		background-color: $btn-default-bg-pasive-hover;
+	}
+}
+
+.btn--small {
+	padding: 0 .5em;
+	height: $btn-small-size;
+}
+
+.btn--medium {
+	height: $btn-small-size;
+}
+
+.btn--large {
+	padding: .5em 1em;
+}
+
+.btn--cta {
+	background-color: $brand-primary;
+	transition: background easeIn 250ms;
+
+	&:hover {
+		background-color: $brand-primary-active;
+	}
+}
+
+.btn--icon {
+	background-color: transparent;
+
+	svg {
+		height: 65%;
+		fill: $brand-delta;
+		transition: background easeIn 250ms;
+		vertical-align: bottom;
+	}
+
+	&:hover {
+		background-color: transparent;
+
+		svg {
+			fill: $brand-primary;
+		}
+	}
+}
+
+.btn--pill {
+	@extend %pill;
+
+	width: $btn-small-size;
+	padding: 0;
+	background-color: #fff;
+	border: 1px solid $btn-border;
+
+	svg {
+		fill: $brand-primary;
+		animation: iconOut .25s;
+	}
+
+	&:hover {
+		background-color: $brand-primary;
+		border: 1px solid $btn-border;
+
+		svg {
+			fill: #fff;
+			animation: iconIn .25s;
+		}
+	}
+
+	&.is-disabled {
+		border-color: grey;
+		transition: none;
+
+		svg,
+		:hover & {
+			fill: grey;
+			animation: none;
+			background-color: #fff;
+		}
+	}
+}
+
+// 1, 2. Because border on btn affects abs positioning
+.btn__ripple {
+  position: absolute;
+  top: -1px;  // [1]
+  left: -1px; // [2]
+  border-radius: 50%;
+  width: $btn-small-size;
+  height: $btn-small-size;
+  background: black;//$brand-primary-active;
+  opacity: 0;
+
+    
+  animation: ripple-animation 500ms;
+}
+
+.btn--google {
+	background-color: $google;
+	margin-bottom: $default-spacing-unit;
+
+	svg {
+		width: 1.5em;
+		vertical-align: middle;
+		fill: #ffffff;
+	}
+}
+
+.btn__text {
+	@include font-size(17px);
+
+	margin-left: .5em;
+	vertical-align: inherit;
+}

@@ -1,0 +1,89 @@
+/**
+ * BUTTONS
+ *
+ * PALLETE
+ * DIMENSIONS
+ * ENABLED
+ * DEFAULT ATOM
+ * LIBRARY ATOMS
+ */
+
+/**
+ * PALLETE
+ */
+$btn-default-color: #ffffff !default;
+$btn-default-border-width: em(1px) !default;
+$btn-default-border-color: $btn-default-bg !default;
+$btn-default-border-color-hover: $btn-default-bg-hover !default;
+$btn-default-border-style: solid !default;
+$btn-default-spacing: halve($default-spacing-unit) !default;
+
+/**
+ * DIMENSIONS
+ */
+$btn-radius: 3px;
+
+/** 
+ * ENABLED 
+ */
+$nosferatu-btn-pill: false !default;
+
+/**
+ * DEFAULT ATOMS
+ */
+
+/**
+ * Default Nosferatu button style. If you want to create your own
+ * buttons copy this atom styles and make your own changes.
+ *
+ * Extending %btn abstraction.
+ */
+
+.btn,
+%btn {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 100%;
+    font-family: inherit;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0 $btn-default-spacing - $btn-default-border-width;
+    color: $btn-default-color;
+    border-radius: $btn-radius;
+
+    transition: all .2s ease-in-out 0s;
+
+    @if ($btn-default-border-width != 0) {
+        border: $btn-default-border-width $btn-default-border-style $btn-default-border-color;
+    }
+
+    &,
+    &:hover,
+    &:active {
+        text-decoration: none;
+
+        @if($btn-default-border-width != 0) {
+            border-color: $btn-default-border-color-hover;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn::-moz-focus-inner,
+%btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+@if ($nosferatu-btn-pill == true) {
+    .btn--pill,
+    %btn--pill {
+        border-radius: 100px;
+    }
+}

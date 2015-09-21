@@ -1,0 +1,29 @@
+%formelement {
+	@include font-size(15px, 2.5);
+
+	display: block;
+	width: 100%;
+	margin-bottom: $default-spacing-unit;
+	border: 1px solid $border-color;
+	border-radius: $border-radius;
+}
+
+.input {
+	@extend %formelement;
+
+	padding: 0 $default-spacing-unit;
+}
+
+.selectbox {
+	@extend %formelement;
+
+	padding-left: .9em;
+}
+
+.selectbox__select {
+	@include font-size(15px, 2.5);
+
+	width: 100%;
+	border: 0;
+	background: transparent;
+}

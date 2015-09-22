@@ -5,3 +5,11 @@ $default-spacing-unit: 1.5em;
 
 $input-spacing: 3px;
 $border-radius: 3px;
+
+/**
+ * Responsive dimensions
+ */
+$base-w: 1000px;
+$tablet-w: 960px;
+$mobile-portrait-w: 320px;
+$mobile-landscape-w: 480px;

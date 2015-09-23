@@ -1,0 +1,382 @@
+/**
+ * Responsive dimensions
+ */
+/**
+ * RESET
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Give form elements some cursor interactions.
+ * From Harry Roberts - inuit.css
+ */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer; }
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none; }
+
+/**
+ * Base styles
+ */
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; }
+
+body {
+  margin: 1.5em auto;
+  padding: 0 1.5em;
+  background-color: #fff; }
+
+.body {
+  background-color: #fafafa; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+/**
+ * Functions
+ */
+/**
+ * Convert number to EMs
+ * 
+ * @return {Number in ems}
+ */
+/**
+ * Math functions to help keep consistent sizes
+ */
+/**
+ * Mixins
+ */
+/**
+ * Font size with vertical rhytm.
+ * Thanks to Harry Roberts (inuit.css).
+ */
+/**
+ * BUTTONS
+ *
+ * PALLETE
+ * DIMENSIONS
+ * ENABLED
+ * DEFAULT ATOM
+ * LIBRARY ATOMS
+ */
+/**
+ * PALLETE
+ */
+/**
+ * DIMENSIONS
+ */
+/** 
+ * ENABLED 
+ */
+/**
+ * DEFAULT ATOMS
+ */
+/**
+ * Default Nosferatu button style. If you want to create your own
+ * buttons copy this atom styles and make your own changes.
+ *
+ * Extending %btn abstraction.
+ */
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 100%;
+  font-family: inherit;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0 0.9375em;
+  color: #ffffff;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out 0s;
+  border: 0.0625em solid #17a9a8; }
+  .btn,
+  .btn:hover,
+  .btn:active {
+    text-decoration: none;
+    border-color: #17a9a8; }
+  .btn:focus {
+    outline: 0; }
+
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.btn--pill {
+  border-radius: 1000px; }
+
+@keyframes iconIn {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(90deg); } }
+
+@keyframes iconOut {
+  from {
+    transform: rotate(90deg); }
+  to {
+    transform: rotate(0deg); } }
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(0);
+    opacity: 0.4; }
+  to {
+    transform: scale(1.8);
+    opacity: 0; } }
+
+h2, .beta {
+  font-size: 1.375rem;
+  line-height: 1;
+  font-weight: normal;
+  color: #627793;
+  margin: 0 0 1.5em; }
+
+h3, .gamma {
+  font-size: 1.125rem;
+  line-height: 1.2222222222;
+  font-weight: normal;
+  color: #627793;
+  margin: 0 0 0.75em; }
+
+.headingsinfo {
+  font-size: 0.75rem;
+  line-height: 1.8333333333;
+  color: #627793; }
+
+.btn {
+  box-sizing: border-box;
+  line-height: 1.5;
+  position: relative;
+  background-color: #c6c6c6;
+  border: 0; }
+  .btn:hover {
+    background-color: #8f8f8f; }
+
+.btn--small {
+  line-height: 1.5; }
+
+.btn--medium {
+  line-height: 2.5; }
+
+.btn--large {
+  line-height: 3; }
+
+.btn--cta {
+  background-color: #17a9a8;
+  transition: background easeIn 250ms; }
+  .btn--cta:hover {
+    background-color: #0b9694; }
+
+.btn--icon {
+  background-color: transparent; }
+  .btn--icon svg {
+    height: 65%;
+    fill: #627793;
+    transition: background easeIn 250ms;
+    vertical-align: bottom; }
+  .btn--icon:hover {
+    background-color: transparent; }
+    .btn--icon:hover svg {
+      fill: #17a9a8; }
+
+.btn--circle {
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #fff;
+  border: 1px solid #17a9a8; }
+  .btn--circle svg {
+    fill: #17a9a8;
+    animation: iconOut 0.25s; }
+  .btn--circle:hover {
+    background-color: #17a9a8;
+    border: 1px solid #17a9a8; }
+    .btn--circle:hover svg {
+      fill: #fff;
+      animation: iconIn 0.25s; }
+  .btn--circle.is-disabled {
+    border-color: grey;
+    transition: none; }
+    .btn--circle.is-disabled svg,
+    :hover .btn--circle.is-disabled {
+      fill: grey;
+      animation: none;
+      background-color: #fff; }
+
+.btn__ripple {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  background: black;
+  opacity: 0;
+  animation: ripple-animation 500ms; }
+
+.btn--google {
+  background-color: #DD4B39;
+  margin-bottom: 1.5em; }
+  .btn--google svg {
+    width: 1.5em;
+    vertical-align: middle;
+    fill: #ffffff; }
+
+.btn__text {
+  font-size: 1.0625rem;
+  line-height: 1.2941176471;
+  margin-left: .5em;
+  vertical-align: inherit; }
+
+.info-pill {
+  display: inline-block;
+  padding: 0 1em;
+  line-height: 1.5;
+  background-color: #17a9a8;
+  color: #ffffff;
+  text-transform: uppercase; }
+
+.table {
+  text-align: left;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: 1.5em; }
+  .table th,
+  .table td {
+    font-size: 0.875rem;
+    line-height: 1.5714285714;
+    vertical-align: middle;
+    line-height: 2;
+    padding: 0 1em;
+    color: #627793; }
+
+.table__head {
+  background-color: #17a9a8; }
+  .table__head td {
+    color: #fff; }
+
+.table--simpleborder tr {
+  border-bottom: 1px solid #efeef0; }
+
+.table--simpleborder thead tr {
+  border: 0; }
+
+.table--strips tbody tr:nth-of-type(odd) {
+  background-color: #17a9a8; }
+
+.table--full {
+  width: 100%; }
+
+.input, .selectbox {
+  font-size: 0.9375rem;
+  line-height: 2.5;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em;
+  border: 1px solid #efeef0;
+  border-radius: 3px; }
+
+.input {
+  padding: 0 1.5em; }
+
+.selectbox {
+  padding-left: .9em; }
+
+.selectbox__select {
+  font-size: 0.9375rem;
+  line-height: 2.5;
+  width: 100%;
+  border: 0;
+  background: transparent; }
+
+/**
+ * Grid system
+ *
+ **/
+.grid {
+  margin-left: -1.5em; }
+
+.grid__item, .grid__item--full {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-right: -4px;
+  padding-left: 1.5em;
+  box-sizing: border-box; }
+
+.grid__item--full {
+  padding-left: 0; }
+
+.grid-half {
+  width: 50%; }
+
+/**
+* Thirds
+*/
+.grid-one-third {
+  width: 33.333%; }
+
+.grid-two-thirds {
+  width: 66.666%; }
+
+/**
+ * Quarters
+ */
+.grid-quarter {
+  width: 25%; }
+
+/**
+ * Fifths
+ */
+.grid-fifth {
+  width: 20%; }
+
+.grid-twofifths {
+  width: 40%; }
+
+.grid-threefifts {
+  width: 60%; }
+
+.grid-fourfifths {
+  width: 80%; }
+
+.box {
+  padding: 1.5em;
+  border: 1px solid #efeef0;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.05); }
+
+.alert {
+  font-size: 0.8125rem;
+  line-height: 3;
+  padding: 0 1.5em;
+  margin-bottom: 1.5em;
+  color: #17a9a8; }
+
+.alert--info {
+  background-color: #fafafa; }
+
+/*# sourceMappingURL=nosferatu.css.map */

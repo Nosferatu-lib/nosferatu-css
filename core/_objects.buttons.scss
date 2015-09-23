@@ -84,6 +84,6 @@ $nosferatu-btn-pill: false !default;
 @if ($nosferatu-btn-pill == true) {
     .btn--pill,
     %btn--pill {
-        border-radius: 100px;
+        border-radius: 1000px;
     }
 }

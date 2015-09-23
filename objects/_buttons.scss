@@ -1,4 +1,4 @@
-$btn-small-size: 2.5em;
+$btn-circle-size: 2.5em;
 
 .btn,
 %btn {
@@ -14,16 +14,15 @@ $btn-small-size: 2.5em;
 }
 
 .btn--small {
-	padding: 0 .5em;
-	height: $btn-small-size;
+	line-height: 1.5;
 }
 
 .btn--medium {
-	height: $btn-small-size;
+	line-height: 2.5;
 }
 
 .btn--large {
-	padding: .5em 1em;
+	line-height: 3;
 }
 
 .btn--cta {
@@ -54,11 +53,9 @@ $btn-small-size: 2.5em;
 	}
 }
 
-.btn--pill {
-	@extend %pill;
-
-	width: $btn-small-size;
-	padding: 0;
+.btn--circle {
+	width: $btn-circle-size;
+	height: $btn-circle-size;
 	background-color: #fff;
 	border: 1px solid $btn-border;
 
@@ -96,8 +93,8 @@ $btn-small-size: 2.5em;
   top: -1px;  // [1]
   left: -1px; // [2]
   border-radius: 50%;
-  width: $btn-small-size;
-  height: $btn-small-size;
+  width: $btn-circle-size;
+  height: $btn-circle-size;
   background: black;//$brand-primary-active;
   opacity: 0;
 

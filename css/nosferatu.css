@@ -87,9 +87,6 @@ button::-moz-focus-inner {
 /**
  * DIMENSIONS
  */
-/** 
- * ENABLED 
- */
 /**
  * DEFAULT ATOMS
  */
@@ -126,7 +123,8 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-.btn--pill {
+.btn--pill,
+.btn--uilarge, .btn__ripple {
   border-radius: 1000px; }
 
 @keyframes iconIn {
@@ -206,8 +204,8 @@ h3, .gamma {
   height: 24px; }
 
 .btn--uilarge {
-  width: 36px;
-  height: 36px;
+  width: 38.4px;
+  height: 38.4px;
   padding: 0;
   background-color: #fff;
   border: 1px solid #17a9a8;
@@ -235,9 +233,8 @@ h3, .gamma {
   position: absolute;
   top: -1px;
   left: -1px;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 38.4px;
+  height: 38.4px;
   background: black;
   opacity: 0;
   animation: ripple-animation 500ms; }

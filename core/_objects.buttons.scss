@@ -23,11 +23,6 @@ $btn-default-spacing: halve($default-spacing-unit) !default;
  */
 $btn-radius: 3px;
 
-/** 
- * ENABLED 
- */
-$nosferatu-btn-pill: false !default;
-
 /**
  * DEFAULT ATOMS
  */
@@ -81,9 +76,7 @@ $nosferatu-btn-pill: false !default;
     padding: 0;
 }
 
-@if ($nosferatu-btn-pill == true) {
-    .btn--pill,
-    %btn--pill {
-        border-radius: 1000px;
-    }
+.btn--pill,
+%btn--pill {
+    border-radius: 1000px;
 }

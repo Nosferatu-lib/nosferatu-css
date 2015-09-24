@@ -1,5 +1,5 @@
 $btn-icon-size--small: $default-spacing-unit * 1;
-$btn-icon-size--large: $default-spacing-unit * 1.5;
+$btn-icon-size--large: $default-spacing-unit * 1.6;
 $btn-padding--small: $default-spacing-unit / 4;
 $btn-padding--medium: $default-spacing-unit / 2;
 
@@ -58,6 +58,8 @@ $btn-padding--medium: $default-spacing-unit / 2;
 }
 
 .btn--uilarge {
+	@extend %btn--pill;
+
 	width: $btn-icon-size--large;
 	height: $btn-icon-size--large;
 	padding: 0;
@@ -96,17 +98,18 @@ $btn-padding--medium: $default-spacing-unit / 2;
 
 // 1, 2. Because border on btn affects abs positioning
 .btn__ripple {
-  position: absolute;
-  top: -$btn-default-border-width;  // [1]
-  left: -$btn-default-border-width; // [2]
-  border-radius: 50%;
-  width: $btn-icon-size--large;
-  height: $btn-icon-size--large;
-  background: black;//$brand-primary-active;
-  opacity: 0;
+	@extend %btn--pill;
 
-    
-  animation: ripple-animation 500ms;
+	position: absolute;
+	top: -$btn-default-border-width;  // [1]
+	left: -$btn-default-border-width; // [2]
+	width: $btn-icon-size--large;
+	height: $btn-icon-size--large;
+	background: black;//$brand-primary-active;
+	opacity: 0;
+
+
+	animation: ripple-animation 500ms;
 }
 
 .btn--google {

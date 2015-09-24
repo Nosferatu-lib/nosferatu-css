@@ -1,4 +1,7 @@
-$btn-circle-size: 2.5em;
+$btn-icon-size--small: $default-spacing-unit * 1;
+$btn-icon-size--large: $default-spacing-unit * 1.5;
+$btn-padding--small: $default-spacing-unit / 4;
+$btn-padding--medium: $default-spacing-unit / 2;
 
 .btn,
 %btn {
@@ -14,15 +17,11 @@ $btn-circle-size: 2.5em;
 }
 
 .btn--small {
-	line-height: 1.5;
+	padding: $btn-padding--small $btn-padding--small * 2;
 }
 
 .btn--medium {
-	line-height: 2.5;
-}
-
-.btn--large {
-	line-height: 3;
+	padding: $btn-padding--medium $btn-padding--medium * 2;
 }
 
 .btn--cta {
@@ -53,12 +52,17 @@ $btn-circle-size: 2.5em;
 	}
 }
 
+.btn--ui {
+	width: $btn-icon-size--small;
+	height: $btn-icon-size--small;
+}
+
 .btn--circle {
-	width: $btn-circle-size;
-	height: $btn-circle-size;
+	width: $btn-icon-size--large;
+	height: $btn-icon-size--large;
 	padding: 0;
 	background-color: #fff;
-	border: 1px solid $btn-border;
+	border: $btn-default-border-width solid $btn-border;
 	box-sizing: content-box;
 
 	svg {
@@ -69,7 +73,7 @@ $btn-circle-size: 2.5em;
 
 	&:hover {
 		background-color: $brand-primary;
-		border: 1px solid $btn-border;
+		border: $btn-default-border-width solid $btn-border;
 
 		svg {
 			fill: #fff;
@@ -93,11 +97,11 @@ $btn-circle-size: 2.5em;
 // 1, 2. Because border on btn affects abs positioning
 .btn__ripple {
   position: absolute;
-  top: -1px;  // [1]
-  left: -1px; // [2]
+  top: -$btn-default-border-width;  // [1]
+  left: -$btn-default-border-width; // [2]
   border-radius: 50%;
-  width: $btn-circle-size;
-  height: $btn-circle-size;
+  width: $btn-icon-size--large;
+  height: $btn-icon-size--large;
   background: black;//$brand-primary-active;
   opacity: 0;
 

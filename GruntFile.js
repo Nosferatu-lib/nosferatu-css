@@ -26,6 +26,14 @@ module.exports = function(grunt) {
             }
         },
 
+        watch: {
+            //Automatic compilation of SASS changes
+            sass: {
+                files: ['**/*.scss'],
+                tasks: ['sass:build', 'notify:build']
+            }
+        },
+
         notify: {
             build: {
                 options: {
@@ -34,6 +42,10 @@ module.exports = function(grunt) {
             }
         }
     });
+
+    grunt.registerTask('dev', [
+        'watch:sass'
+    ]);
 
     grunt.registerTask('build', [
         'sass:build',

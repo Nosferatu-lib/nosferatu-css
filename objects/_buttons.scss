@@ -56,12 +56,15 @@ $btn-circle-size: 2.5em;
 .btn--circle {
 	width: $btn-circle-size;
 	height: $btn-circle-size;
+	padding: 0;
 	background-color: #fff;
 	border: 1px solid $btn-border;
+	box-sizing: content-box;
 
 	svg {
 		fill: $brand-primary;
 		animation: iconOut .25s;
+		vertical-align: middle;
 	}
 
 	&:hover {

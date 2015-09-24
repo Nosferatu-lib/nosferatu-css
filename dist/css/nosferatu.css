@@ -205,28 +205,28 @@ h3, .gamma {
   width: 24px;
   height: 24px; }
 
-.btn--circle {
+.btn--uilarge {
   width: 36px;
   height: 36px;
   padding: 0;
   background-color: #fff;
   border: 1px solid #17a9a8;
   box-sizing: content-box; }
-  .btn--circle svg {
+  .btn--uilarge svg {
     fill: #17a9a8;
     animation: iconOut 0.25s;
     vertical-align: middle; }
-  .btn--circle:hover {
+  .btn--uilarge:hover {
     background-color: #17a9a8;
     border: 1px solid #17a9a8; }
-    .btn--circle:hover svg {
+    .btn--uilarge:hover svg {
       fill: #fff;
       animation: iconIn 0.25s; }
-  .btn--circle.is-disabled {
+  .btn--uilarge.is-disabled {
     border-color: grey;
     transition: none; }
-    .btn--circle.is-disabled svg,
-    :hover .btn--circle.is-disabled {
+    .btn--uilarge.is-disabled svg,
+    :hover .btn--uilarge.is-disabled {
       fill: grey;
       animation: none;
       background-color: #fff; }

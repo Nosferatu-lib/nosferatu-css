@@ -151,6 +151,9 @@ button::-moz-focus-inner {
     transform: scale(1.8);
     opacity: 0; } }
 
+.push--btm {
+  margin-bottom: 24px; }
+
 h2, .beta {
   font-size: 1.375rem;
   line-height: 1;

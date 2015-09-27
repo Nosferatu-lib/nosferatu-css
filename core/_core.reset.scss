@@ -32,3 +32,9 @@ textarea:focus {
     cursor: text;
     outline: none;
 }
+
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}

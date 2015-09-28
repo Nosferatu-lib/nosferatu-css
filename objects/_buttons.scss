@@ -17,13 +17,11 @@ $btn-padding--medium: $default-spacing-unit / 2;
 }
 
 .btn--small {
-	padding: 0 $btn-padding--small * 2;
-	height: 2.5em;
+	padding: $btn-padding--small $btn-padding--small * 2;
 }
 
 .btn--medium {
-	padding: 0 $btn-padding--medium * 2;
-	height: 3em;
+	padding: $btn-padding--medium $btn-padding--medium * 2;
 }
 
 .btn--cta {

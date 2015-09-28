@@ -183,12 +183,10 @@ h3, .gamma {
     background-color: #8f8f8f; }
 
 .btn--small {
-  padding: 0 12px;
-  height: 2.5em; }
+  padding: 6px 12px; }
 
 .btn--medium {
-  padding: 0 24px;
-  height: 3em; }
+  padding: 12px 24px; }
 
 .btn--cta {
   background-color: #17a9a8;

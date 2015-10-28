@@ -1,14 +1,16 @@
 $btn-icon-size--small: $default-spacing-unit * 1.3;
 $btn-icon-size--large: $default-spacing-unit * 1.6;
+$btn-padding--default: $default-spacing-unit / 3 + 1;
+$btn-padding--xsmall: $default-spacing-unit / 9;
 $btn-padding--small: $default-spacing-unit / 4;
-$btn-padding--medium: $default-spacing-unit / 2;
+$btn-padding--large: $default-spacing-unit / 2;
 
 .btn,
 %btn {
+	padding: $btn-padding--default $btn-padding--default * 2;
 	box-sizing: border-box;
 	position: relative;
 	background-color: $btn-default-bg-pasive;
-	border: 0;
 	vertical-align: middle;
 
 	&:hover {
@@ -16,22 +18,32 @@ $btn-padding--medium: $default-spacing-unit / 2;
 	}
 }
 
+.btn--xsmall {
+	@include font-size(14px, 1);
+
+	padding: $btn-padding--xsmall $btn-padding--xsmall * 2;
+}
+
 .btn--small {
-	padding: 0 $btn-padding--small * 2;
-	height: 2.5em;
+	@include font-size(14px);
+
+	padding: $btn-padding--small $btn-padding--small * 2;
 }
 
-.btn--medium {
-	padding: 0 $btn-padding--medium * 2;
-	height: 3em;
+.btn--large {
+	@include font-size(20px);
+
+	padding: $btn-padding--large $btn-padding--large * 2;
 }
 
-.btn--cta {
-	background-color: $brand-primary;
+.btn--primary {
+	background-color: $btn-primary;
 	transition: background easeIn 250ms;
+	border: 1px solid $btn-primary;
 
 	&:hover {
-		background-color: $brand-primary-active;
+		background-color: $btn-primary-hover;
+		border-color: $btn-primary-hover;
 	}
 }
 
@@ -57,6 +69,7 @@ $btn-padding--medium: $default-spacing-unit / 2;
 .btn--ui {
 	width: $btn-icon-size--small;
 	height: $btn-icon-size--small;
+	padding: 0;
 }
 
 .btn--uilarge {
@@ -66,22 +79,20 @@ $btn-padding--medium: $default-spacing-unit / 2;
 	height: $btn-icon-size--large;
 	padding: 0;
 	background-color: #fff;
-	border: $btn-default-border-width solid $btn-border;
+	border: 1px solid $btn-border;
 	box-sizing: content-box;
 
 	svg {
 		fill: $brand-primary;
-		animation: iconOut .25s;
 		vertical-align: middle;
 	}
 
 	&:hover {
 		background-color: $brand-primary;
-		border: $btn-default-border-width solid $btn-border;
+		border: 1px solid $btn-border;
 
 		svg {
 			fill: #fff;
-			animation: iconIn .25s;
 		}
 	}
 
@@ -92,10 +103,19 @@ $btn-padding--medium: $default-spacing-unit / 2;
 		svg,
 		:hover & {
 			fill: grey;
-			animation: none;
 			background-color: #fff;
 		}
 	}
+}
+
+.btn__linkWrap {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.btn--link {
+	line-height: 2.5;
 }
 
 // 1, 2. Because border on btn affects abs positioning
@@ -103,8 +123,8 @@ $btn-padding--medium: $default-spacing-unit / 2;
 	@extend %btn--pill;
 
 	position: absolute;
-	top: -$btn-default-border-width;  // [1]
-	left: -$btn-default-border-width; // [2]
+	top: -1px;  // [1]
+	left: -1px; // [2]
 	width: $btn-icon-size--large;
 	height: $btn-icon-size--large;
 	background: black;//$brand-primary-active;

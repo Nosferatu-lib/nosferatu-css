@@ -12,10 +12,6 @@
  * PALLETE
  */
 $btn-default-color: #ffffff !default;
-$btn-default-border-width: 1px !default;
-$btn-default-border-color: $btn-default-bg !default;
-$btn-default-border-color-hover: $btn-default-bg-hover !default;
-$btn-default-border-style: solid !default;
 $btn-default-spacing: halve($default-spacing-unit) !default;
 
 /**
@@ -44,25 +40,16 @@ $btn-radius: 3px;
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
-    border: 0;
-    padding: 0 $btn-default-spacing - $btn-default-border-width;
+    border: 1px solid transparent;
     color: $btn-default-color;
     border-radius: $btn-radius;
 
     transition: all .2s ease-in-out 0s;
 
-    @if ($btn-default-border-width != 0) {
-        border: $btn-default-border-width $btn-default-border-style $btn-default-border-color;
-    }
-
     &,
     &:hover,
     &:active {
         text-decoration: none;
-
-        @if($btn-default-border-width != 0) {
-            border-color: $btn-default-border-color-hover;
-        }
     }
 
     &:focus {

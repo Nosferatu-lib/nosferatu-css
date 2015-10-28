@@ -14,6 +14,15 @@ h3, .gamma {
 	margin: 0 0 $default-spacing-unit / 2;
 }
 
+h4, .delta {
+	@include font-size(18px);
+
+	font-weight: normal;
+	text-transform: uppercase;
+	color: $brand-primary;
+	margin: 0 0 $default-spacing-unit / 2;
+}
+
 .headingsinfo {
 	@include font-size(12px);
 

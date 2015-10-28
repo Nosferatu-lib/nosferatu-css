@@ -1,14 +1,15 @@
-$brand-primary: #17a9a8;
-$brand-primary-active: #0b9694;
-$brand-secondary: #be4474;
+$brand-primary: #DF4400;
+$brand-primary-active: #9CD462;
+$brand-secondary: #3498db;
+$brand-secondary-active: #2980b9;
 $brand-tertiary: #fff;
 $brand-delta: #627793;
-$brand-border-light: #efeef0;
+$brand-border-light: #e0e0e0;
 $brand-bg-light: #fafafa;
 
 // TEXT
 $text-primary: $brand-delta;
-$text-secondary: #17a9a8;
+$text-secondary: $brand-primary;
 
 // HEADINGS
 $heading: $brand-delta;
@@ -21,6 +22,9 @@ $btn-default-color: #ffffff;
 $btn-border: $brand-primary;
 $btn-default-bg-pasive: #c6c6c6 !default;
 $btn-default-bg-pasive-hover: #8f8f8f !default;
+
+$btn-primary: $brand-secondary;
+$btn-primary-hover: $brand-secondary-active;
 
 $btn-pill-bg: $brand-tertiary;
 

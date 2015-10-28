@@ -1,11 +1,14 @@
-$brand-primary: #DF4400;
-$brand-primary-active: #9CD462;
-$brand-secondary: #3498db;
-$brand-secondary-active: #2980b9;
-$brand-tertiary: #fff;
-$brand-delta: #627793;
-$brand-border-light: #e0e0e0;
-$brand-bg-light: #fafafa;
+$brand-primary: #DF4400;          // Main brand color - orange
+$brand-secondary: #3498db;        // Blue - mostly buttons, CTA
+$brand-secondary-active: #2980b9; // CTA active state
+$brand-delta: #627793;            // Text color
+$brand-border: #e0e0e0;           // Sidebar border, table borders
+$brand-bg-light: #fafafa;         // Light bg (sidebar bg)
+
+// Default button colors
+$brand-light-active: #e6e6e6;
+$brand-light-border: #ccc;
+$brand-light-border-active: #adadad;
 
 // TEXT
 $text-primary: $brand-delta;
@@ -16,26 +19,22 @@ $heading: $brand-delta;
 $heading-info: $brand-delta;
 
 // BUTTONS
-$btn-default-bg: $brand-primary;
-$btn-default-bg-hover: $brand-primary;
-$btn-default-color: #ffffff;
-$btn-border: $brand-primary;
-$btn-default-bg-pasive: #c6c6c6 !default;
-$btn-default-bg-pasive-hover: #8f8f8f !default;
+$btn-default-bg: #fff;
+$btn-default-bg-hover: $brand-light-active;
+$btn-default-color: $brand-delta;
+$btn-border: $brand-light-border;
 
 $btn-primary: $brand-secondary;
 $btn-primary-hover: $brand-secondary-active;
 
-$btn-pill-bg: $brand-tertiary;
-
-// TABLES
-$border-color: $brand-border-light;
+// TABLES TODO: check
+$border-color: $brand-border;
 $table-strip-bg: $brand-primary;
 $thead-bg: $brand-primary;
 
-// MAIN
+// NAV BAR
 $navbar-bg: $brand-bg-light;
-$navbar-border: $brand-border-light;
+$navbar-border: $brand-border;
 
 // SOCIAL
 $google: #DD4B39;

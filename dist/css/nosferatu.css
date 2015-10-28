@@ -106,7 +106,7 @@ button::-moz-focus-inner {
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
-  color: #ffffff;
+  color: #627793;
   border-radius: 3px;
   transition: all 0.2s ease-in-out 0s; }
   .btn,
@@ -178,10 +178,13 @@ h4, .delta {
   padding: 9px 18px;
   box-sizing: border-box;
   position: relative;
-  background-color: #c6c6c6;
+  background-color: #fff;
+  border-color: #ccc;
+  color: #627793;
   vertical-align: middle; }
   .btn:hover {
-    background-color: #8f8f8f; }
+    background-color: #e6e6e6;
+    border-color: #adadad; }
 
 .btn--xsmall {
   font-size: 0.875rem;
@@ -191,7 +194,7 @@ h4, .delta {
 .btn--small {
   font-size: 0.875rem;
   line-height: 1.5714285714;
-  padding: 6px 12px; }
+  padding: 4.8px 9.6px; }
 
 .btn--large {
   font-size: 1.25rem;
@@ -199,6 +202,7 @@ h4, .delta {
   padding: 12px 24px; }
 
 .btn--primary {
+  color: #fff;
   background-color: #3498db;
   transition: background easeIn 250ms;
   border: 1px solid #3498db; }
@@ -221,21 +225,22 @@ h4, .delta {
 .btn--ui {
   width: 31.2px;
   height: 31.2px;
-  padding: 0; }
+  padding: 0;
+  border: 0; }
 
 .btn--uilarge {
   width: 38.4px;
   height: 38.4px;
   padding: 0;
   background-color: #fff;
-  border: 1px solid #DF4400;
+  border: 1px solid #ccc;
   box-sizing: content-box; }
   .btn--uilarge svg {
     fill: #DF4400;
     vertical-align: middle; }
   .btn--uilarge:hover {
     background-color: #DF4400;
-    border: 1px solid #DF4400; }
+    border: 1px solid #ccc; }
     .btn--uilarge:hover svg {
       fill: #fff; }
   .btn--uilarge.is-disabled {
@@ -266,11 +271,15 @@ h4, .delta {
 
 .btn--google {
   background-color: #DD4B39;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  border: 0;
+  color: #fff; }
   .btn--google svg {
     width: 1.5em;
     vertical-align: middle;
     fill: #ffffff; }
+  .btn--google:hover {
+    background-color: #c23321; }
 
 .btn__text {
   font-size: 1.0625rem;
@@ -282,8 +291,8 @@ h4, .delta {
   display: inline-block;
   padding: 0 1em;
   line-height: 1.5;
-  background-color: #DF4400;
-  color: #ffffff;
+  background-color: #fff;
+  color: #627793;
   text-transform: uppercase; }
 
 .table {
